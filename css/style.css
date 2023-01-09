@@ -153,7 +153,7 @@ h2 {
 }
 
 .header__container {
-  max-width: 1170px;
+  max-width: 1140px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1940,14 +1940,19 @@ body._touch .menu__list > li._active .menu__arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 40px;
 }
 
 .portfolio__item {
-  width: 49%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1959,10 +1964,20 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 30px;
 }
 
+.portfolio__item-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
 .portfolio__date {
   font-weight: 500;
   font-size: 16px;
-  margin-bottom: 40px;
   color: #8c8c91;
 }
 
@@ -1974,14 +1989,10 @@ body._touch .menu__list > li._active .menu__arrow {
   text-transform: uppercase;
 }
 
-.portfolio__stack {
-  margin-top: 40px;
-}
-
 .portfolio__stack-list-item {
   padding-left: 22px;
-  margin-bottom: 20px;
   position: relative;
+  line-height: 1.4;
 }
 
 .portfolio__stack-list-item::before {
@@ -1993,8 +2004,17 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 800;
 }
 
-.portfolio__link {
-  margin-top: 50px;
+.portfolio__stack-list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.portfolio__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
 }
 
 .portfolio__img {
@@ -2330,7 +2350,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .portfolio__img {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: 60%;
   }
 }
@@ -2701,10 +2721,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .portfolio__item {
     width: 100%;
-  }
-
-  .portfolio__item:not(:last-child) {
-    margin-bottom: 40px;
   }
 
   .portfolio__img {
